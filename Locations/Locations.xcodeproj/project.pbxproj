@@ -14,6 +14,9 @@
 		AE48AD8D2B0C358700829A79 /* LocationsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE48AD8C2B0C358700829A79 /* LocationsTests.swift */; };
 		AE48AD972B0C358700829A79 /* LocationsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE48AD962B0C358700829A79 /* LocationsUITests.swift */; };
 		AE48AD992B0C358700829A79 /* LocationsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE48AD982B0C358700829A79 /* LocationsUITestsLaunchTests.swift */; };
+		AE48ADAA2B0C382200829A79 /* Agency.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE48ADA92B0C382200829A79 /* Agency.swift */; };
+		AE48ADAE2B0C3A4700829A79 /* Stars.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE48ADAD2B0C3A4700829A79 /* Stars.swift */; };
+		AE48ADB02B0C3D2B00829A79 /* Coordinates.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE48ADAF2B0C3D2B00829A79 /* Coordinates.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +47,9 @@
 		AE48AD922B0C358700829A79 /* LocationsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LocationsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE48AD962B0C358700829A79 /* LocationsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsUITests.swift; sourceTree = "<group>"; };
 		AE48AD982B0C358700829A79 /* LocationsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		AE48ADA92B0C382200829A79 /* Agency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Agency.swift; sourceTree = "<group>"; };
+		AE48ADAD2B0C3A4700829A79 /* Stars.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stars.swift; sourceTree = "<group>"; };
+		AE48ADAF2B0C3D2B00829A79 /* Coordinates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinates.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +100,7 @@
 		AE48AD7A2B0C358600829A79 /* Locations */ = {
 			isa = PBXGroup;
 			children = (
+				AE48ADA82B0C380700829A79 /* Entities */,
 				AE48AD7B2B0C358600829A79 /* LocationsApp.swift */,
 				AE48AD7D2B0C358600829A79 /* ContentView.swift */,
 				AE48AD7F2B0C358700829A79 /* Assets.xcassets */,
@@ -125,6 +132,16 @@
 				AE48AD982B0C358700829A79 /* LocationsUITestsLaunchTests.swift */,
 			);
 			path = LocationsUITests;
+			sourceTree = "<group>";
+		};
+		AE48ADA82B0C380700829A79 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				AE48ADA92B0C382200829A79 /* Agency.swift */,
+				AE48ADAD2B0C3A4700829A79 /* Stars.swift */,
+				AE48ADAF2B0C3D2B00829A79 /* Coordinates.swift */,
+			);
+			path = Entities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,6 +275,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				AE48AD7E2B0C358600829A79 /* ContentView.swift in Sources */,
+				AE48ADAE2B0C3A4700829A79 /* Stars.swift in Sources */,
+				AE48ADB02B0C3D2B00829A79 /* Coordinates.swift in Sources */,
+				AE48ADAA2B0C382200829A79 /* Agency.swift in Sources */,
 				AE48AD7C2B0C358600829A79 /* LocationsApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
