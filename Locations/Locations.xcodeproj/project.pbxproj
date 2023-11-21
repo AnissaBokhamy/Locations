@@ -17,6 +17,7 @@
 		AE48ADAA2B0C382200829A79 /* Agency.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE48ADA92B0C382200829A79 /* Agency.swift */; };
 		AE48ADAE2B0C3A4700829A79 /* Stars.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE48ADAD2B0C3A4700829A79 /* Stars.swift */; };
 		AE48ADB02B0C3D2B00829A79 /* Coordinates.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE48ADAF2B0C3D2B00829A79 /* Coordinates.swift */; };
+		AE48ADB42B0C523600829A79 /* AgenciesDataSources.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE48ADB32B0C523600829A79 /* AgenciesDataSources.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +51,7 @@
 		AE48ADA92B0C382200829A79 /* Agency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Agency.swift; sourceTree = "<group>"; };
 		AE48ADAD2B0C3A4700829A79 /* Stars.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stars.swift; sourceTree = "<group>"; };
 		AE48ADAF2B0C3D2B00829A79 /* Coordinates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinates.swift; sourceTree = "<group>"; };
+		AE48ADB32B0C523600829A79 /* AgenciesDataSources.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgenciesDataSources.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 		AE48AD7A2B0C358600829A79 /* Locations */ = {
 			isa = PBXGroup;
 			children = (
+				AE48ADB22B0C521E00829A79 /* DataSource */,
 				AE48ADA82B0C380700829A79 /* Entities */,
 				AE48AD7B2B0C358600829A79 /* LocationsApp.swift */,
 				AE48AD7D2B0C358600829A79 /* ContentView.swift */,
@@ -142,6 +145,14 @@
 				AE48ADAF2B0C3D2B00829A79 /* Coordinates.swift */,
 			);
 			path = Entities;
+			sourceTree = "<group>";
+		};
+		AE48ADB22B0C521E00829A79 /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+				AE48ADB32B0C523600829A79 /* AgenciesDataSources.swift */,
+			);
+			path = DataSource;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -275,6 +286,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AE48AD7E2B0C358600829A79 /* ContentView.swift in Sources */,
+				AE48ADB42B0C523600829A79 /* AgenciesDataSources.swift in Sources */,
 				AE48ADAE2B0C3A4700829A79 /* Stars.swift in Sources */,
 				AE48ADB02B0C3D2B00829A79 /* Coordinates.swift in Sources */,
 				AE48ADAA2B0C382200829A79 /* Agency.swift in Sources */,
