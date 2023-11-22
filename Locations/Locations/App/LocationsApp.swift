@@ -4,7 +4,7 @@ import SwiftUI
 struct LocationsApp: App {
   var body: some Scene {
     WindowGroup {
-      AgenciesMapView()
+      AgenciesMapView(viewModel: ViewModelsFactories.agenciesMapViewModelFactory)
     }
   }
 }
