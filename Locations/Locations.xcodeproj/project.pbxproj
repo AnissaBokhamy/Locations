@@ -7,9 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		AE48AD7C2B0C358600829A79 /* LocationsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE48AD7B2B0C358600829A79 /* LocationsApp.swift */; };
-		AE48AD7E2B0C358600829A79 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE48AD7D2B0C358600829A79 /* ContentView.swift */; };
-		AE48AD832B0C358700829A79 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE48AD822B0C358700829A79 /* Preview Assets.xcassets */; };
 		AE48AD8D2B0C358700829A79 /* LocationsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE48AD8C2B0C358700829A79 /* LocationsTests.swift */; };
 		AE48AD972B0C358700829A79 /* LocationsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE48AD962B0C358700829A79 /* LocationsUITests.swift */; };
 		AE48AD992B0C358700829A79 /* LocationsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE48AD982B0C358700829A79 /* LocationsUITestsLaunchTests.swift */; };
@@ -22,6 +19,8 @@
 		AE510FEA2B1048BD008584B2 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE510FE52B1048BD008584B2 /* Colors.swift */; };
 		AE510FEB2B1048BD008584B2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE510FE72B1048BD008584B2 /* Assets.xcassets */; };
 		AE510FEC2B1048BD008584B2 /* Icons.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE510FE82B1048BD008584B2 /* Icons.swift */; };
+		AE510FEF2B1048F3008584B2 /* LocationsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE510FEE2B1048F3008584B2 /* LocationsApp.swift */; };
+		AE510FF52B104916008584B2 /* AgenciesMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE510FF22B104916008584B2 /* AgenciesMapView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,9 +42,6 @@
 
 /* Begin PBXFileReference section */
 		AE48AD782B0C358600829A79 /* Locations.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Locations.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		AE48AD7B2B0C358600829A79 /* LocationsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsApp.swift; sourceTree = "<group>"; };
-		AE48AD7D2B0C358600829A79 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		AE48AD822B0C358700829A79 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		AE48AD882B0C358700829A79 /* LocationsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LocationsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE48AD8C2B0C358700829A79 /* LocationsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsTests.swift; sourceTree = "<group>"; };
 		AE48AD922B0C358700829A79 /* LocationsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LocationsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -60,6 +56,8 @@
 		AE510FE52B1048BD008584B2 /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		AE510FE72B1048BD008584B2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AE510FE82B1048BD008584B2 /* Icons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Icons.swift; sourceTree = "<group>"; };
+		AE510FEE2B1048F3008584B2 /* LocationsApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationsApp.swift; sourceTree = "<group>"; };
+		AE510FF22B104916008584B2 /* AgenciesMapView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AgenciesMapView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,23 +108,14 @@
 		AE48AD7A2B0C358600829A79 /* Locations */ = {
 			isa = PBXGroup;
 			children = (
+				AE510FED2B1048F3008584B2 /* App */,
 				AE48ADB22B0C521E00829A79 /* DataSource */,
 				AE510FE22B1048BD008584B2 /* Design */,
 				AE48ADA82B0C380700829A79 /* Entities */,
 				AE510FDF2B104888008584B2 /* Network */,
-				AE48AD7B2B0C358600829A79 /* LocationsApp.swift */,
-				AE48AD7D2B0C358600829A79 /* ContentView.swift */,
-				AE48AD812B0C358700829A79 /* Preview Content */,
+				AE510FF02B104916008584B2 /* Views */,
 			);
 			path = Locations;
-			sourceTree = "<group>";
-		};
-		AE48AD812B0C358700829A79 /* Preview Content */ = {
-			isa = PBXGroup;
-			children = (
-				AE48AD822B0C358700829A79 /* Preview Assets.xcassets */,
-			);
-			path = "Preview Content";
 			sourceTree = "<group>";
 		};
 		AE48AD8B2B0C358700829A79 /* LocationsTests */ = {
@@ -197,6 +186,30 @@
 				AE510FE82B1048BD008584B2 /* Icons.swift */,
 			);
 			path = Icons;
+			sourceTree = "<group>";
+		};
+		AE510FED2B1048F3008584B2 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				AE510FEE2B1048F3008584B2 /* LocationsApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		AE510FF02B104916008584B2 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				AE510FF12B104916008584B2 /* AgenciesMap */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		AE510FF12B104916008584B2 /* AgenciesMap */ = {
+			isa = PBXGroup;
+			children = (
+				AE510FF22B104916008584B2 /* AgenciesMapView.swift */,
+			);
+			path = AgenciesMap;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -303,7 +316,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AE48AD832B0C358700829A79 /* Preview Assets.xcassets in Resources */,
 				AE510FEB2B1048BD008584B2 /* Assets.xcassets in Resources */,
 				AE510FE92B1048BD008584B2 /* Colors.xcassets in Resources */,
 			);
@@ -330,14 +342,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AE48AD7E2B0C358600829A79 /* ContentView.swift in Sources */,
 				AE510FEA2B1048BD008584B2 /* Colors.swift in Sources */,
+				AE510FF52B104916008584B2 /* AgenciesMapView.swift in Sources */,
 				AE48ADB42B0C523600829A79 /* AgenciesDataSources.swift in Sources */,
+				AE510FEF2B1048F3008584B2 /* LocationsApp.swift in Sources */,
 				AE48ADAE2B0C3A4700829A79 /* Stars.swift in Sources */,
 				AE48ADB02B0C3D2B00829A79 /* Coordinates.swift in Sources */,
 				AE510FEC2B1048BD008584B2 /* Icons.swift in Sources */,
 				AE48ADAA2B0C382200829A79 /* Agency.swift in Sources */,
-				AE48AD7C2B0C358600829A79 /* LocationsApp.swift in Sources */,
 				AE510FE12B104888008584B2 /* JSONLoader.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -501,7 +513,6 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Locations/Preview Content\"";
 				DEVELOPMENT_TEAM = 3239Q57S3W;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -530,7 +541,6 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Locations/Preview Content\"";
 				DEVELOPMENT_TEAM = 3239Q57S3W;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
