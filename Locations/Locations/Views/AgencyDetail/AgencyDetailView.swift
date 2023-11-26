@@ -13,6 +13,7 @@ struct AgencyDetailView: View {
           .font(.headline)
         starsRatingView
         Text(viewModel.lastUpdateText)
+        moreSectionView
         Spacer()
       }
     }
@@ -30,6 +31,21 @@ struct AgencyDetailView: View {
         } else {
           Image(Icons.Star.outlined)
             .renderingMode(.template)
+        }
+      }
+    }
+  }
+
+  @ViewBuilder
+  private var moreSectionView: some View {
+    List(viewModel.moreItemsSection) { moreItem in
+      Section(moreItem.name) {
+        ForEach(moreItem.subItems) { subItem in
+          HStack {
+            Text(subItem.title)
+            Spacer()
+            Text(subItem.value)
+          }
         }
       }
     }

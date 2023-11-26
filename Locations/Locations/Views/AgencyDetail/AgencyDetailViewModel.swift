@@ -1,9 +1,20 @@
+import CoreLocation
 import Foundation
 
 struct AgencyDetailViewModel {
 
   var lastUpdateText: String {
     "Last updated at: \(formattedLastUpdateTimestamp)"
+  }
+
+  var moreItemsSection: [MoreItem] {
+    [MoreItem(
+        name: "Coordinates",
+        subItems: [
+          MoreSubItem(title: "Min bounds", value: agency.coordinates.minBounds?.format() ?? "unavailable"),
+          MoreSubItem(title: "Max bounds", value: agency.coordinates.maxBounds?.format() ?? "unavailable")
+        ]
+    )]
   }
 
   var locationText: String {
@@ -25,5 +36,31 @@ struct AgencyDetailViewModel {
     }
     return lastUpdateTimestamp
       .formatted(date: .numeric, time: .standard)
+  }
+}
+
+// MARK: - More Items
+struct MoreItem: Identifiable {
+  var id: String {
+    name
+  }
+
+  let name: String
+  let subItems: [MoreSubItem]
+}
+
+struct MoreSubItem: Identifiable {
+  var id: String {
+    title
+  }
+
+  let title: String
+  let value: String
+}
+
+// MARK: - CLLocationCoordinate2D+Formatter
+private extension CLLocationCoordinate2D {
+  func format() -> String {
+    "(\(latitude), \(longitude))"
   }
 }
