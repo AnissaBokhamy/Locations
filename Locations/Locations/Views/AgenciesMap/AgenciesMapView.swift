@@ -8,8 +8,8 @@ struct AgenciesMapView: View {
       ForEach(viewModel.agencies, id: \.name) { agency in
         if let agencyCenterLocation = agency.centerLocation {
           Annotation(agency.name, coordinate: agencyCenterLocation) {
-            Button(action: { }) {
-              Image(uiImage: Icons.pin)
+            Button(action: { onPinTap(agency) }) {
+              Image(Icons.pin)
                 .renderingMode(.template)
                 .foregroundStyle(agency.pinColor)
             }
@@ -23,6 +23,7 @@ struct AgenciesMapView: View {
   }
 
   @StateObject var viewModel: AgenciesMapViewModel
+  let onPinTap: (Agency) -> Void
 }
 
 // MARK: - Preview
@@ -59,5 +60,8 @@ struct AgenciesMapView: View {
     ),
   ]
 
-  return AgenciesMapView(viewModel: AgenciesMapViewModel(loadAgencies: { return nil }, agencies: agencies))
+  return AgenciesMapView(
+    viewModel: AgenciesMapViewModel(loadAgencies: { return nil }, agencies: agencies),
+    onPinTap: { _ in }
+  )
 }
