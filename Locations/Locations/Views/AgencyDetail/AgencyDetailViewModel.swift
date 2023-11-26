@@ -3,8 +3,9 @@ import Foundation
 
 struct AgencyDetailViewModel {
 
-  var lastUpdateText: String {
-    "Last updated at: \(formattedLastUpdateTimestamp)"
+  var lastUpdateText: String? {
+    guard let formattedLastUpdateTimestamp else { return nil }
+    return "Last updated at: \(formattedLastUpdateTimestamp)"
   }
 
   var moreItemsSection: [MoreItem] {
@@ -30,9 +31,9 @@ struct AgencyDetailViewModel {
 
   let agency: Agency
 
-  private var formattedLastUpdateTimestamp: String {
+  private var formattedLastUpdateTimestamp: String? {
     guard let lastUpdateTimestamp = agency.lastUpdateTimestamp else {
-      return "unknown"
+      return nil
     }
     return lastUpdateTimestamp
       .formatted(date: .numeric, time: .standard)

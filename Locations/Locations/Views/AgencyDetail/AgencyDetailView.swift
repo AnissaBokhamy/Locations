@@ -8,15 +8,21 @@ struct AgencyDetailView: View {
         .font(.largeTitle)
         .fontWeight(.bold)
 
-      VStack(alignment: .leading, spacing: Spacing.small) {
-        Text(viewModel.locationText)
-          .font(.headline)
-        starsRatingView
-        Text(viewModel.lastUpdateText)
-        moreSectionView
-        Spacer()
+      ScrollView {
+        VStack(alignment: .leading, spacing: Spacing.small) {
+          Text(viewModel.locationText)
+            .font(.headline)
+          starsRatingView
+          if let lastUpdateText = viewModel.lastUpdateText {
+            Text(lastUpdateText)
+          }
+          moreSectionView
+          Spacer()
+        }
       }
     }
+    .padding(.top, Padding.large)
+    .padding(.horizontal, Padding.medium)
   }
   
   let viewModel: AgencyDetailViewModel
