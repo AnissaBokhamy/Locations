@@ -11,6 +11,7 @@ struct AgencyDetailView: View {
       VStack(alignment: .leading, spacing: Spacing.small) {
         Text(viewModel.locationText)
           .font(.headline)
+        starsRatingView
         Text(viewModel.lastUpdateText)
         Spacer()
       }
@@ -18,6 +19,21 @@ struct AgencyDetailView: View {
   }
   
   let viewModel: AgencyDetailViewModel
+
+  @ViewBuilder
+  private var starsRatingView: some View {
+    HStack(spacing: Spacing.small) {
+      ForEach(0..<5) { starNumber in
+        if starNumber <= viewModel.agency.stars.rawValue {
+          Image(Icons.Star.filled)
+            .renderingMode(.template)
+        } else {
+          Image(Icons.Star.outlined)
+            .renderingMode(.template)
+        }
+      }
+    }
+  }
 }
 
 #Preview {

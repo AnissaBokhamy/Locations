@@ -1,5 +1,10 @@
 import SwiftUI
 
 enum Icons {
-  static let pin = #imageLiteral(resourceName: "pin.svg")
+  static let pin = "pin"
+
+  enum Star {
+    static let filled = "Star/filled"
+    static let outlined = "Star/outlined"
+  }
 }
