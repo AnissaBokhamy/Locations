@@ -26,6 +26,9 @@
 		AE5110032B104C12008584B2 /* Agency+BusinessProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE5110012B104C12008584B2 /* Agency+BusinessProperties.swift */; };
 		AE5110042B104C12008584B2 /* AgenciesMapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE5110022B104C12008584B2 /* AgenciesMapViewModel.swift */; };
 		AE5110072B104D2D008584B2 /* CoreNavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE5110062B104D2D008584B2 /* CoreNavigationView.swift */; };
+		AE5110092B104DDF008584B2 /* AgencyDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE5110082B104DDF008584B2 /* AgencyDetailView.swift */; };
+		AE70EDCE2B1386FB00E5FF61 /* AgencyDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE70EDCD2B1386FB00E5FF61 /* AgencyDetailViewModel.swift */; };
+		AE70EDD12B1387FA00E5FF61 /* Spacing.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE70EDD02B1387FA00E5FF61 /* Spacing.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +71,9 @@
 		AE5110012B104C12008584B2 /* Agency+BusinessProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Agency+BusinessProperties.swift"; sourceTree = "<group>"; };
 		AE5110022B104C12008584B2 /* AgenciesMapViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AgenciesMapViewModel.swift; sourceTree = "<group>"; };
 		AE5110062B104D2D008584B2 /* CoreNavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreNavigationView.swift; sourceTree = "<group>"; };
+		AE5110082B104DDF008584B2 /* AgencyDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgencyDetailView.swift; sourceTree = "<group>"; };
+		AE70EDCD2B1386FB00E5FF61 /* AgencyDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgencyDetailViewModel.swift; sourceTree = "<group>"; };
+		AE70EDD02B1387FA00E5FF61 /* Spacing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spacing.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -175,6 +181,7 @@
 		AE510FE22B1048BD008584B2 /* Design */ = {
 			isa = PBXGroup;
 			children = (
+				AE70EDCF2B1387E700E5FF61 /* Layout */,
 				AE510FE32B1048BD008584B2 /* Colors */,
 				AE510FE62B1048BD008584B2 /* Icons */,
 			);
@@ -211,6 +218,7 @@
 		AE510FF02B104916008584B2 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				AE51100A2B104DEA008584B2 /* AgencyDetail */,
 				AE510FF12B104916008584B2 /* AgenciesMap */,
 			);
 			path = Views;
@@ -241,6 +249,23 @@
 				AE5110062B104D2D008584B2 /* CoreNavigationView.swift */,
 			);
 			path = Navigation;
+			sourceTree = "<group>";
+		};
+		AE51100A2B104DEA008584B2 /* AgencyDetail */ = {
+			isa = PBXGroup;
+			children = (
+				AE5110082B104DDF008584B2 /* AgencyDetailView.swift */,
+				AE70EDCD2B1386FB00E5FF61 /* AgencyDetailViewModel.swift */,
+			);
+			path = AgencyDetail;
+			sourceTree = "<group>";
+		};
+		AE70EDCF2B1387E700E5FF61 /* Layout */ = {
+			isa = PBXGroup;
+			children = (
+				AE70EDD02B1387FA00E5FF61 /* Spacing.swift */,
+			);
+			path = Layout;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -377,13 +402,16 @@
 				AE510FF52B104916008584B2 /* AgenciesMapView.swift in Sources */,
 				AE48ADB42B0C523600829A79 /* AgenciesDataSources.swift in Sources */,
 				AE510FEF2B1048F3008584B2 /* LocationsApp.swift in Sources */,
+				AE70EDD12B1387FA00E5FF61 /* Spacing.swift in Sources */,
 				AE48ADAE2B0C3A4700829A79 /* Stars.swift in Sources */,
 				AE5110002B104BE2008584B2 /* ViewModelsFactory.swift in Sources */,
 				AE48ADB02B0C3D2B00829A79 /* Coordinates.swift in Sources */,
+				AE5110092B104DDF008584B2 /* AgencyDetailView.swift in Sources */,
 				AE510FEC2B1048BD008584B2 /* Icons.swift in Sources */,
 				AE510FFE2B104BC2008584B2 /* AgenciesMapViewModelFactory.swift in Sources */,
 				AE5110032B104C12008584B2 /* Agency+BusinessProperties.swift in Sources */,
 				AE5110072B104D2D008584B2 /* CoreNavigationView.swift in Sources */,
+				AE70EDCE2B1386FB00E5FF61 /* AgencyDetailViewModel.swift in Sources */,
 				AE5110042B104C12008584B2 /* AgenciesMapViewModel.swift in Sources */,
 				AE48ADAA2B0C382200829A79 /* Agency.swift in Sources */,
 				AE510FE12B104888008584B2 /* JSONLoader.swift in Sources */,
