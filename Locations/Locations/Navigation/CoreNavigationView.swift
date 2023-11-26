@@ -11,18 +11,15 @@ struct CoreNavigationView: View {
       viewModel: ViewModelsFactories.agenciesMapViewModelFactory,
       onPinTap: showAgencyDetailsSheet
     )
-    .sheet(isPresented: $isShowingAgencyDetails) {
-      if let selectedAgency {
-        AgencyDetailView(viewModel: AgencyDetailViewModel(agency: selectedAgency))
-          .presentationDetents([.medium])
-          .presentationDragIndicator(.visible)
-      }
+    .sheet(item: $selectedAgency) { selectedAgency in
+      AgencyDetailView(viewModel: AgencyDetailViewModel(agency: selectedAgency))
+        .presentationDetents([.medium])
+        .presentationDragIndicator(.visible)
     }
   }
 
   // MARK: Private
 
-  @State private var isShowingAgencyDetails: Bool = false
   @State private var selectedAgency: Agency? = nil
 
   // MARK: - Methods
@@ -31,7 +28,6 @@ struct CoreNavigationView: View {
 
   private func showAgencyDetailsSheet(for agency: Agency) {
     selectedAgency = agency
-    isShowingAgencyDetails = true
   }
 }
 

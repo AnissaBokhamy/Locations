@@ -13,13 +13,14 @@ struct Agencies: Equatable, Decodable {
   }
 }
 
-struct Agency: Equatable, Decodable {
+struct Agency: Identifiable, Equatable, Decodable {
 
   // MARK: - Lifecycle
 
   init(from decoder: Decoder) throws {
     let values = try decoder.container(keyedBy: CodingKeys.self)
 
+    id = try values.decode(Int.self, forKey: .id)
     name = try values.decode(String.self, forKey: .name)
     city = try? values.decode(String.self, forKey: .city)
     countryCode = try values.decode(Locale.Region.self, forKey: .countryCode)
@@ -38,6 +39,7 @@ struct Agency: Equatable, Decodable {
     lastUpdateTimestamp: Date?,
     coordinates: Coordinates
   ) {
+    id = UUID().hashValue
     self.name = name
     self.city = city
     self.countryCode = countryCode
@@ -49,6 +51,7 @@ struct Agency: Equatable, Decodable {
 
   // MARK: - Properties
 
+  let id: Int
   let name: String
   let city: String?
   let countryCode: Locale.Region
@@ -60,6 +63,7 @@ struct Agency: Equatable, Decodable {
   // MARK: - Types
 
   enum CodingKeys: String, CodingKey {
+    case id = "feed_id"
     case name = "feed_name"
     case city = "feed_location"
     case countryCode = "country_codes"
