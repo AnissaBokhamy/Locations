@@ -29,6 +29,7 @@
 		AE5110092B104DDF008584B2 /* AgencyDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE5110082B104DDF008584B2 /* AgencyDetailView.swift */; };
 		AE70EDCE2B1386FB00E5FF61 /* AgencyDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE70EDCD2B1386FB00E5FF61 /* AgencyDetailViewModel.swift */; };
 		AE70EDD12B1387FA00E5FF61 /* Spacing.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE70EDD02B1387FA00E5FF61 /* Spacing.swift */; };
+		AE70EDD32B13B06A00E5FF61 /* Padding.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE70EDD22B13B06A00E5FF61 /* Padding.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +75,7 @@
 		AE5110082B104DDF008584B2 /* AgencyDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgencyDetailView.swift; sourceTree = "<group>"; };
 		AE70EDCD2B1386FB00E5FF61 /* AgencyDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgencyDetailViewModel.swift; sourceTree = "<group>"; };
 		AE70EDD02B1387FA00E5FF61 /* Spacing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spacing.swift; sourceTree = "<group>"; };
+		AE70EDD22B13B06A00E5FF61 /* Padding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Padding.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -264,6 +266,7 @@
 			isa = PBXGroup;
 			children = (
 				AE70EDD02B1387FA00E5FF61 /* Spacing.swift */,
+				AE70EDD22B13B06A00E5FF61 /* Padding.swift */,
 			);
 			path = Layout;
 			sourceTree = "<group>";
@@ -409,6 +412,7 @@
 				AE5110092B104DDF008584B2 /* AgencyDetailView.swift in Sources */,
 				AE510FEC2B1048BD008584B2 /* Icons.swift in Sources */,
 				AE510FFE2B104BC2008584B2 /* AgenciesMapViewModelFactory.swift in Sources */,
+				AE70EDD32B13B06A00E5FF61 /* Padding.swift in Sources */,
 				AE5110032B104C12008584B2 /* Agency+BusinessProperties.swift in Sources */,
 				AE5110072B104D2D008584B2 /* CoreNavigationView.swift in Sources */,
 				AE70EDCE2B1386FB00E5FF61 /* AgencyDetailViewModel.swift in Sources */,
