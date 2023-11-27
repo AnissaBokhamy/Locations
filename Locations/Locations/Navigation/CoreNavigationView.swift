@@ -15,6 +15,7 @@ struct CoreNavigationView: View {
       AgencyDetailView(viewModel: AgencyDetailViewModel(agency: selectedAgency))
         .presentationDetents([.medium])
         .presentationDragIndicator(.visible)
+        .presentationBackgroundInteraction(.enabled)
     }
   }
 
