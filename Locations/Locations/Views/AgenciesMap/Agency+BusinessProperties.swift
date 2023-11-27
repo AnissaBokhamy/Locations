@@ -6,17 +6,17 @@ extension Agency {
   var pinColor: Color {
     switch countryCode {
     case .canada:
-      return Colors.red
+      return Colors.Accent.red
     case .unitedStates:
-      return Colors.pink
+      return Colors.Accent.pink
     case .france:
-      return Colors.darkBlue
+      return Colors.Accent.darkBlue
     case .unitedKingdom:
-      return Colors.green
+      return Colors.Accent.green
     case .germany:
-      return Colors.yellow
+      return Colors.Accent.yellow
     default:
-      return Colors.lightBlue
+      return Colors.Accent.lightBlue
     }
   }
 
