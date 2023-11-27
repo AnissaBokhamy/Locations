@@ -1,18 +1,32 @@
 import Foundation
+import SwiftUI
 
 @MainActor
 class AgenciesMapViewModel: ObservableObject {
 
-  init(loadAgencies: @Sendable @escaping () async throws -> Agencies?, agencies: [Agency] = []) {
+  // MARK: - Lifecycle
+
+  init(
+    loadAgencies: @Sendable @escaping () async throws -> Agencies?,
+    agencies: [Agency] = [],
+    agenciesMapTheme: AgenciesMapTheme
+  ) {
     self.loadAgencies = loadAgencies
-    self.agencies = agencies
+    self.agenciesMapTheme = agenciesMapTheme
+    self.agenciesViewModels = agencies.map { AgencyMapViewModel(agency: $0, agenciesMapTheme: agenciesMapTheme) }
   }
 
+  // MARK: - Properties
+
+  let agenciesMapTheme: AgenciesMapTheme
   let loadAgencies: @Sendable () async throws -> Agencies?
 
-  @Published private(set) var agencies: [Agency] = []
+  @Published private(set) var agenciesViewModels: [AgencyMapViewModel] = []
+
+  // MARK: - Methods
 
   func loadAgencies() async {
-    agencies = try! await loadAgencies()?.agencies ?? []
+    let agencies = try! await loadAgencies()?.agencies ?? []
+    agenciesViewModels = agencies.map { AgencyMapViewModel(agency: $0, agenciesMapTheme: agenciesMapTheme) }
   }
 }

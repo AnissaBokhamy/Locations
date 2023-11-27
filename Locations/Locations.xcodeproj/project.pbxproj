@@ -23,7 +23,7 @@
 		AE510FF52B104916008584B2 /* AgenciesMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE510FF22B104916008584B2 /* AgenciesMapView.swift */; };
 		AE510FFE2B104BC2008584B2 /* AgenciesMapViewModelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE510FFD2B104BC2008584B2 /* AgenciesMapViewModelFactory.swift */; };
 		AE5110002B104BE2008584B2 /* ViewModelsFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE510FFF2B104BE2008584B2 /* ViewModelsFactory.swift */; };
-		AE5110032B104C12008584B2 /* Agency+BusinessProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE5110012B104C12008584B2 /* Agency+BusinessProperties.swift */; };
+		AE5110032B104C12008584B2 /* AgencyMapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE5110012B104C12008584B2 /* AgencyMapViewModel.swift */; };
 		AE5110042B104C12008584B2 /* AgenciesMapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE5110022B104C12008584B2 /* AgenciesMapViewModel.swift */; };
 		AE5110072B104D2D008584B2 /* CoreNavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE5110062B104D2D008584B2 /* CoreNavigationView.swift */; };
 		AE5110092B104DDF008584B2 /* AgencyDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE5110082B104DDF008584B2 /* AgencyDetailView.swift */; };
@@ -33,6 +33,8 @@
 		AE70EDD62B140B9F00E5FF61 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE70EDD52B140B9F00E5FF61 /* Theme.swift */; };
 		AE70EDDD2B14111E00E5FF61 /* ThemeSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE70EDDC2B14111E00E5FF61 /* ThemeSelector.swift */; };
 		AE70EDDE2B142CE000E5FF61 /* DefaultTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE70EDD72B140D0500E5FF61 /* DefaultTheme.swift */; };
+		AE70EDE02B142D1900E5FF61 /* AgenciesMapTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE70EDDF2B142D1900E5FF61 /* AgenciesMapTheme.swift */; };
+		AE70EDE42B143B9E00E5FF61 /* ThemeFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE70EDE32B143B9E00E5FF61 /* ThemeFactory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,7 +74,7 @@
 		AE510FF22B104916008584B2 /* AgenciesMapView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AgenciesMapView.swift; sourceTree = "<group>"; };
 		AE510FFD2B104BC2008584B2 /* AgenciesMapViewModelFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AgenciesMapViewModelFactory.swift; sourceTree = "<group>"; };
 		AE510FFF2B104BE2008584B2 /* ViewModelsFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelsFactory.swift; sourceTree = "<group>"; };
-		AE5110012B104C12008584B2 /* Agency+BusinessProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Agency+BusinessProperties.swift"; sourceTree = "<group>"; };
+		AE5110012B104C12008584B2 /* AgencyMapViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AgencyMapViewModel.swift; sourceTree = "<group>"; };
 		AE5110022B104C12008584B2 /* AgenciesMapViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AgenciesMapViewModel.swift; sourceTree = "<group>"; };
 		AE5110062B104D2D008584B2 /* CoreNavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreNavigationView.swift; sourceTree = "<group>"; };
 		AE5110082B104DDF008584B2 /* AgencyDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgencyDetailView.swift; sourceTree = "<group>"; };
@@ -82,6 +84,8 @@
 		AE70EDD52B140B9F00E5FF61 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		AE70EDD72B140D0500E5FF61 /* DefaultTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultTheme.swift; sourceTree = "<group>"; };
 		AE70EDDC2B14111E00E5FF61 /* ThemeSelector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeSelector.swift; sourceTree = "<group>"; };
+		AE70EDDF2B142D1900E5FF61 /* AgenciesMapTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgenciesMapTheme.swift; sourceTree = "<group>"; };
+		AE70EDE32B143B9E00E5FF61 /* ThemeFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeFactory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -238,7 +242,7 @@
 			children = (
 				AE510FF22B104916008584B2 /* AgenciesMapView.swift */,
 				AE5110022B104C12008584B2 /* AgenciesMapViewModel.swift */,
-				AE5110012B104C12008584B2 /* Agency+BusinessProperties.swift */,
+				AE5110012B104C12008584B2 /* AgencyMapViewModel.swift */,
 			);
 			path = AgenciesMap;
 			sourceTree = "<group>";
@@ -247,6 +251,7 @@
 			isa = PBXGroup;
 			children = (
 				AE510FFD2B104BC2008584B2 /* AgenciesMapViewModelFactory.swift */,
+				AE70EDE32B143B9E00E5FF61 /* ThemeFactory.swift */,
 				AE510FFF2B104BE2008584B2 /* ViewModelsFactory.swift */,
 			);
 			path = ViewModelsFactories;
@@ -281,11 +286,28 @@
 		AE70EDD42B140B8F00E5FF61 /* Theme */ = {
 			isa = PBXGroup;
 			children = (
+				AE70EDE22B142EE400E5FF61 /* DefaultTheme */,
+				AE70EDE12B142D3C00E5FF61 /* SubThemes */,
 				AE70EDD52B140B9F00E5FF61 /* Theme.swift */,
 				AE70EDDC2B14111E00E5FF61 /* ThemeSelector.swift */,
-				AE70EDD72B140D0500E5FF61 /* DefaultTheme.swift */,
 			);
 			path = Theme;
+			sourceTree = "<group>";
+		};
+		AE70EDE12B142D3C00E5FF61 /* SubThemes */ = {
+			isa = PBXGroup;
+			children = (
+				AE70EDDF2B142D1900E5FF61 /* AgenciesMapTheme.swift */,
+			);
+			path = SubThemes;
+			sourceTree = "<group>";
+		};
+		AE70EDE22B142EE400E5FF61 /* DefaultTheme */ = {
+			isa = PBXGroup;
+			children = (
+				AE70EDD72B140D0500E5FF61 /* DefaultTheme.swift */,
+			);
+			path = DefaultTheme;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -421,17 +443,19 @@
 				AE70EDDE2B142CE000E5FF61 /* DefaultTheme.swift in Sources */,
 				AE510FEA2B1048BD008584B2 /* Colors.swift in Sources */,
 				AE510FF52B104916008584B2 /* AgenciesMapView.swift in Sources */,
+				AE70EDE42B143B9E00E5FF61 /* ThemeFactory.swift in Sources */,
 				AE48ADB42B0C523600829A79 /* AgenciesDataSources.swift in Sources */,
 				AE510FEF2B1048F3008584B2 /* LocationsApp.swift in Sources */,
 				AE70EDD12B1387FA00E5FF61 /* Spacing.swift in Sources */,
 				AE48ADAE2B0C3A4700829A79 /* Stars.swift in Sources */,
 				AE5110002B104BE2008584B2 /* ViewModelsFactory.swift in Sources */,
 				AE48ADB02B0C3D2B00829A79 /* Coordinates.swift in Sources */,
+				AE70EDE02B142D1900E5FF61 /* AgenciesMapTheme.swift in Sources */,
 				AE5110092B104DDF008584B2 /* AgencyDetailView.swift in Sources */,
 				AE510FEC2B1048BD008584B2 /* Icons.swift in Sources */,
 				AE510FFE2B104BC2008584B2 /* AgenciesMapViewModelFactory.swift in Sources */,
 				AE70EDD32B13B06A00E5FF61 /* Padding.swift in Sources */,
-				AE5110032B104C12008584B2 /* Agency+BusinessProperties.swift in Sources */,
+				AE5110032B104C12008584B2 /* AgencyMapViewModel.swift in Sources */,
 				AE70EDDD2B14111E00E5FF61 /* ThemeSelector.swift in Sources */,
 				AE70EDD62B140B9F00E5FF61 /* Theme.swift in Sources */,
 				AE5110072B104D2D008584B2 /* CoreNavigationView.swift in Sources */,

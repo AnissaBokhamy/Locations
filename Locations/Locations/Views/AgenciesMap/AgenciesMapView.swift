@@ -5,13 +5,13 @@ struct AgenciesMapView: View {
 
   var body: some View {
     Map {
-      ForEach(viewModel.agencies, id: \.name) { agency in
-        if let agencyCenterLocation = agency.centerLocation {
-          Annotation(agency.name, coordinate: agencyCenterLocation) {
-            Button(action: { onPinTap(agency) }) {
+      ForEach(viewModel.agenciesViewModels, id: \.agency.name) { agencyViewModel in
+        if let agencyCenterLocation = agencyViewModel.centerLocation {
+          Annotation(agencyViewModel.agency.name, coordinate: agencyCenterLocation) {
+            Button(action: { onPinTap(agencyViewModel.agency) }) {
               Image(Icons.pin)
                 .renderingMode(.template)
-                .foregroundStyle(agency.pinColor)
+                .foregroundStyle(agencyViewModel.pinColor)
             }
           }
         }
@@ -61,7 +61,12 @@ struct AgenciesMapView: View {
   ]
 
   return AgenciesMapView(
-    viewModel: AgenciesMapViewModel(loadAgencies: { return nil }, agencies: agencies),
+    viewModel: AgenciesMapViewModel(
+      loadAgencies: { return nil },
+      agencies: agencies,
+      agenciesMapTheme: ThemeFactory.themeSelector.selectedTheme.agenciesMapTheme
+    ),
     onPinTap: { _ in }
   )
+  .environmentObject(ThemeFactory.themeSelector)
 }

@@ -7,4 +7,6 @@ protocol Theme {
   var fontDefaultStyle: any ShapeStyle { get }
 
   var fontAccentStyle: any ShapeStyle { get }
+
+  var agenciesMapTheme: AgenciesMapTheme { get }
 }
