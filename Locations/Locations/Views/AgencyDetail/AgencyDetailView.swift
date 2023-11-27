@@ -49,15 +49,25 @@ struct AgencyDetailView: View {
 
   @ViewBuilder
   private var moreSectionView: some View {
-    List(viewModel.moreItemsSection) { moreItem in
-      Section(moreItem.name) {
+    ForEach(viewModel.moreItemsSection) { moreItem in
+      VStack(alignment: .leading) {
+        Text(moreItem.name)
+          .font(.headline)
+          .foregroundStyle(selectedTheme.fontDefaultStyle)
+
         ForEach(moreItem.subItems) { subItem in
           HStack {
             Text(subItem.title)
+              .font(.body)
+              .foregroundStyle(selectedTheme.fontDefaultStyle)
             Spacer()
             Text(subItem.value)
+              .font(.body)
+              .foregroundStyle(selectedTheme.fontDefaultStyle)
           }
+          Divider()
         }
+        .padding(.horizontal, Padding.small)
       }
     }
   }
