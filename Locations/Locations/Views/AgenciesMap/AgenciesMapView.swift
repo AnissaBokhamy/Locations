@@ -3,6 +3,8 @@ import SwiftUI
 
 struct AgenciesMapView: View {
 
+  // MARK: Internal
+
   var body: some View {
     Map {
       ForEach(viewModel.agenciesViewModels, id: \.agency.name) { agencyViewModel in
@@ -11,7 +13,7 @@ struct AgenciesMapView: View {
             Button(action: { onPinTap(agencyViewModel.agency) }) {
               Image(Icons.pin)
                 .renderingMode(.template)
-                .foregroundStyle(agencyViewModel.pinColor)
+                .foregroundStyle(pinColor(for: agencyViewModel.agency.countryCode))
             }
           }
         }
@@ -24,6 +26,13 @@ struct AgenciesMapView: View {
 
   @StateObject var viewModel: AgenciesMapViewModel
   let onPinTap: (Agency) -> Void
+
+  // MARK: Private
+
+  @EnvironmentObject private var themeSelector: ThemeSelector
+  fileprivate var agenciesMapTheme: AgenciesMapTheme {
+    themeSelector.selectedTheme.agenciesMapTheme
+  }
 }
 
 // MARK: - Preview
@@ -63,10 +72,30 @@ struct AgenciesMapView: View {
   return AgenciesMapView(
     viewModel: AgenciesMapViewModel(
       loadAgencies: { return nil },
-      agencies: agencies,
-      agenciesMapTheme: ThemeFactory.themeSelector.selectedTheme.agenciesMapTheme
+      agencies: agencies
     ),
     onPinTap: { _ in }
   )
-  .environmentObject(ThemeFactory.themeSelector)
+  .environmentObject(ThemeSelector(selectedTheme: DefaultTheme()))
+}
+
+// MARK: - AgenciesMapView+PinColor
+extension AgenciesMapView {
+
+  func pinColor(for countryCode: Locale.Region) -> Color {
+    switch countryCode {
+    case .canada:
+      return agenciesMapTheme.canadaPinColor
+    case .unitedStates:
+      return agenciesMapTheme.unitedStatesPinColor
+    case .france:
+      return agenciesMapTheme.francePinColor
+    case .unitedKingdom:
+      return agenciesMapTheme.unitedKingdomPinColor
+    case .germany:
+      return agenciesMapTheme.germanyPinColor
+    default:
+      return agenciesMapTheme.defaultPinColor
+    }
+  }
 }

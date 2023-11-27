@@ -34,7 +34,6 @@
 		AE70EDDD2B14111E00E5FF61 /* ThemeSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE70EDDC2B14111E00E5FF61 /* ThemeSelector.swift */; };
 		AE70EDDE2B142CE000E5FF61 /* DefaultTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE70EDD72B140D0500E5FF61 /* DefaultTheme.swift */; };
 		AE70EDE02B142D1900E5FF61 /* AgenciesMapTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE70EDDF2B142D1900E5FF61 /* AgenciesMapTheme.swift */; };
-		AE70EDE42B143B9E00E5FF61 /* ThemeFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE70EDE32B143B9E00E5FF61 /* ThemeFactory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,7 +84,6 @@
 		AE70EDD72B140D0500E5FF61 /* DefaultTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultTheme.swift; sourceTree = "<group>"; };
 		AE70EDDC2B14111E00E5FF61 /* ThemeSelector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeSelector.swift; sourceTree = "<group>"; };
 		AE70EDDF2B142D1900E5FF61 /* AgenciesMapTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgenciesMapTheme.swift; sourceTree = "<group>"; };
-		AE70EDE32B143B9E00E5FF61 /* ThemeFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeFactory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -251,7 +249,6 @@
 			isa = PBXGroup;
 			children = (
 				AE510FFD2B104BC2008584B2 /* AgenciesMapViewModelFactory.swift */,
-				AE70EDE32B143B9E00E5FF61 /* ThemeFactory.swift */,
 				AE510FFF2B104BE2008584B2 /* ViewModelsFactory.swift */,
 			);
 			path = ViewModelsFactories;
@@ -443,7 +440,6 @@
 				AE70EDDE2B142CE000E5FF61 /* DefaultTheme.swift in Sources */,
 				AE510FEA2B1048BD008584B2 /* Colors.swift in Sources */,
 				AE510FF52B104916008584B2 /* AgenciesMapView.swift in Sources */,
-				AE70EDE42B143B9E00E5FF61 /* ThemeFactory.swift in Sources */,
 				AE48ADB42B0C523600829A79 /* AgenciesDataSources.swift in Sources */,
 				AE510FEF2B1048F3008584B2 /* LocationsApp.swift in Sources */,
 				AE70EDD12B1387FA00E5FF61 /* Spacing.swift in Sources */,

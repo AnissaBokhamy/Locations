@@ -95,5 +95,5 @@ struct AgencyDetailView: View {
       )
     )
   ))
-  .environmentObject(ThemeFactory.themeSelector)
+  .environmentObject(ThemeSelector(selectedTheme: DefaultTheme()))
 }

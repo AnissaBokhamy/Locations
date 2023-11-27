@@ -1,5 +1,4 @@
 import Foundation
-import SwiftUI
 
 @MainActor
 class AgenciesMapViewModel: ObservableObject {
@@ -8,17 +7,14 @@ class AgenciesMapViewModel: ObservableObject {
 
   init(
     loadAgencies: @Sendable @escaping () async throws -> Agencies?,
-    agencies: [Agency] = [],
-    agenciesMapTheme: AgenciesMapTheme
+    agencies: [Agency] = []
   ) {
     self.loadAgencies = loadAgencies
-    self.agenciesMapTheme = agenciesMapTheme
-    self.agenciesViewModels = agencies.map { AgencyMapViewModel(agency: $0, agenciesMapTheme: agenciesMapTheme) }
+    self.agenciesViewModels = agencies.map { AgencyMapViewModel(agency: $0) }
   }
 
   // MARK: - Properties
 
-  let agenciesMapTheme: AgenciesMapTheme
   let loadAgencies: @Sendable () async throws -> Agencies?
 
   @Published private(set) var agenciesViewModels: [AgencyMapViewModel] = []
@@ -27,6 +23,6 @@ class AgenciesMapViewModel: ObservableObject {
 
   func loadAgencies() async {
     let agencies = try! await loadAgencies()?.agencies ?? []
-    agenciesViewModels = agencies.map { AgencyMapViewModel(agency: $0, agenciesMapTheme: agenciesMapTheme) }
+    agenciesViewModels = agencies.map { AgencyMapViewModel(agency: $0) }
   }
 }

@@ -5,7 +5,7 @@ struct LocationsApp: App {
   var body: some Scene {
     WindowGroup {
       CoreNavigationView()
-        .environmentObject(ThemeFactory.themeSelector)
+        .environmentObject(ThemeSelector(selectedTheme: DefaultTheme()))
     }
   }
 }
