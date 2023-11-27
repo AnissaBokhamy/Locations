@@ -9,4 +9,10 @@ enum Colors {
     static let red = Color("Accent/Red")
     static let yellow = Color("Accent/Yellow")
   }
+
+  enum Neutrals {
+    static let black = Color("Neutrals/Black")
+    static let cream = Color("Neutrals/Cream")
+    static let darkGrey = Color("Neutrals/Dark Grey")
+  }
 }
