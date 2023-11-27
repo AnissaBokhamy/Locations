@@ -7,14 +7,17 @@ struct AgencyDetailView: View {
       Text(viewModel.agency.name)
         .font(.largeTitle)
         .fontWeight(.bold)
+        .foregroundStyle(selectedTheme.fontAccentStyle)
 
       ScrollView {
         VStack(alignment: .leading, spacing: Spacing.small) {
           Text(viewModel.locationText)
             .font(.headline)
+            .foregroundStyle(selectedTheme.fontDefaultStyle)
           starsRatingView
           if let lastUpdateText = viewModel.lastUpdateText {
             Text(lastUpdateText)
+              .foregroundStyle(selectedTheme.fontDefaultStyle)
           }
           moreSectionView
           Spacer()
@@ -34,9 +37,11 @@ struct AgencyDetailView: View {
         if starNumber <= viewModel.agency.stars.rawValue {
           Image(Icons.Star.filled)
             .renderingMode(.template)
+            .foregroundStyle(selectedTheme.accentColor)
         } else {
           Image(Icons.Star.outlined)
             .renderingMode(.template)
+            .foregroundStyle(selectedTheme.accentColor)
         }
       }
     }
@@ -55,6 +60,11 @@ struct AgencyDetailView: View {
         }
       }
     }
+  }
+
+  @EnvironmentObject private var themeSelector: ThemeSelector
+  private var selectedTheme: Theme {
+    themeSelector.selectedTheme
   }
 }
 
