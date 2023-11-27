@@ -95,4 +95,5 @@ struct AgencyDetailView: View {
       )
     )
   ))
+  .environmentObject(ThemeFactory.themeSelector)
 }
